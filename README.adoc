@@ -24,7 +24,7 @@ Feature: Is it Friday yet?
       | anything else! | Nope   |
 ---
 
-.Exemple d'image insérée en asciidoc
+.screenshot de l'exécution des tests
 image::screen_code.png[width=80%]
 
 == TP2...
