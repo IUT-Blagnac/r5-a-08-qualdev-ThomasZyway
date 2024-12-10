@@ -22,14 +22,9 @@ public class StepDefinitions {
     private String today;
     private String actualAnswer;
 
-    @Given("today is Sunday")
-    public void today_is_sunday() {
-        today = "Sunday";
-    }
-
-    @Given("today is Friday")
-    public void today_is_friday() {
-        today = "Friday";
+    @Given("today is {string}")
+    public void today_is(String day) {
+        today = day;
     }
 
     @When("I ask whether it's Friday yet")
@@ -47,6 +42,5 @@ class IsItFriday {
     static String isItFriday(String today) {
         return "Friday".equals(today) ? "TGIF" : "Nope";
     }
-
 }
 
