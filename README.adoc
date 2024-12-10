@@ -25,6 +25,6 @@ Feature: Is it Friday yet?
 ---
 
 .Exemple d'image insérée en asciidoc
-image::artifacts-r303.svg[width=80%]
+image::screen_push.png[width=80%]
 
 == TP2...
