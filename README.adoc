@@ -25,12 +25,14 @@ Feature: Is it Friday yet?
 ---
 
 .screenshot de l'exécution des tests
-image::screen_code.png[width=80%]
+image::tp1.png[width=80%]
+
 
 == TP2
 
 .Order.java
 [source,java]
+---
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -66,4 +68,8 @@ class Order {
         return this.cocktails;
     }
 }
+---
+
+.screenshot de l'exécution des tests
+image::tp2.png[width=80%]
 
