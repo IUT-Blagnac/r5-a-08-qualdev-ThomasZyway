@@ -1,36 +1,3 @@
-= R5.A.08 -- Dépôt pour les TPs
-:icons: font
-:MoSCoW: https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW[MoSCoW]
-
-Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Thomas Lainé].
-
-== TP1
-
-.is_it_friday_yet.feature
-[source,java]
----
-Feature: Is it Friday yet?
-  Everybody wants to know when it's Friday
-
-  Scenario Outline: Today is or is not Friday
-    Given today is "<day>"
-    When I ask whether it's Friday yet
-    Then I should be told "<answer>"
-
-  Examples:
-      | day            | answer |
-      | Friday         | TGIF   |
-      | Sunday         | Nope   |
-      | anything else! | Nope   |
----
-
-.screenshot de l'exécution des tests
-image::screen_code.png[width=80%]
-
-== TP2
-
-.Order.java
-[source,java]
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -66,4 +33,3 @@ class Order {
         return this.cocktails;
     }
 }
-
