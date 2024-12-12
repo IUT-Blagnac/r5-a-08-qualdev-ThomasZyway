@@ -32,7 +32,6 @@ image::tp1.png[width=80%]
 
 .Order.java
 [source,java]
----
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -68,7 +67,6 @@ class Order {
         return this.cocktails;
     }
 }
----
 
 .screenshot de l'exécution des tests
 image::tp2.png[width=80%]
