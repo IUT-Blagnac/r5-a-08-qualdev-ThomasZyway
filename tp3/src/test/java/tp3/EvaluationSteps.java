@@ -14,44 +14,41 @@ import io.cucumber.java.en.When;
 
 public class EvaluationSteps {
 
-    private Map<String, Boolean> revisions;
-    private List<String> revisedNotions;
+    private Map<String, Boolean> revisions = new HashMap<>();
+    private List<String> revisedNotions = new ArrayList<>();
 
     @Given("une liste de révisions vide")
     public void uneListeDeRevisionsVide() {
-        if (revisions == null) {
-            revisions = new HashMap<>();
-        } else {
-            revisions.clear();
-        }
+        revisions.clear();
+        System.out.println("Liste de révisions vide initialisée : " + revisions);
     }
 
     @Given("une liste de révisions contenant {string}")
     public void uneListeDeRevisionsContenant(String notion) {
-        if (revisions == null) {
-            revisions = new HashMap<>();
-        }
+        revisions.clear();
         revisions.put(notion, false);
+        System.out.println("Révisions initiales : " + revisions);
     }
 
     @Given("une liste de révisions contenant {string} et {string}")
     public void uneListeDeRevisionsContenantDeuxNotions(String notion1, String notion2) {
-        if (revisions == null) {
-            revisions = new HashMap<>();
-        }
+        revisions.clear();
         revisions.put(notion1, false);
         revisions.put(notion2, false);
+        System.out.println("Révisions initiales : " + revisions);
     }
 
     @When("j'ajoute la notion {string}")
     public void jAjouteLaNotion(String notion) {
         revisions.put(notion, false);
+        System.out.println("Notion ajoutée : " + notion + " - Révisions actuelles : " + revisions);
     }
 
     @When("je marque la notion {string} comme révisée")
     public void jeMarqueLaNotionCommeRevisée(String notion) {
         if (revisions.containsKey(notion)) {
             revisions.put(notion, true);
+            System.out.println("Notion marquée comme révisée : " + notion);
         } else {
             throw new IllegalArgumentException("La notion " + notion + " n'existe pas dans la liste des révisions.");
         }
@@ -59,7 +56,7 @@ public class EvaluationSteps {
 
     @When("je vérifie les notions révisées")
     public void jeVerifieLesNotionsRevisées() {
-        revisedNotions = new ArrayList<>();
+        revisedNotions.clear();
         for (Map.Entry<String, Boolean> entry : revisions.entrySet()) {
             if (entry.getValue()) {
                 revisedNotions.add(entry.getKey());
@@ -75,7 +72,7 @@ public class EvaluationSteps {
 
     @Then("la notion {string} est marquée comme révisée")
     public void laNotionEstMarqueeCommeRevisée(String notion) {
-        assertTrue(revisions.get(notion), "La notion " + notion + " n'est pas marquée comme révisée.");
+        assertTrue(revisions.getOrDefault(notion, false), "La notion " + notion + " n'est pas marquée comme révisée.");
     }
 
     @Then("je dois voir {string} dans la liste des notions révisées")
