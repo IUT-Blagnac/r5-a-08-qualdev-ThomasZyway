@@ -196,12 +196,17 @@ image::tp3.png[width=80%]
 == TP4
 
 Documentation tp1 générée avec cukedoctor
+
 image::doctp1.png[width=80%]
 
 Documentation tp2 générée avec cukedoctor
+
 image::doctp2.1.png[width=80%]
+
 image::doctp2.2.png[width=80%]
 
 Documentation tp3 générée avec cukedoctor
+
 image::doctp3.1.png[width=80%]
+
 image::doctp3.2.png[width=80%]
